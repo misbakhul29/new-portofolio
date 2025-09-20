@@ -15,11 +15,11 @@ function getVar() {
     return null;
 }
 self.options = {
-    "domain": "vayxi.com",
+    "domain": "p2pdh.com",
     "resubscribeOnInstall": true,
-    "zoneId": 9902942,
+    "zoneId": 9903031,
     "ymid": getYmid(),
     "var": getVar()
 }
 self.lary = "";
-importScripts('https://vayxi.com/act/files/sw.perm.check.min.js?r=sw');
+importScripts('https://p2pdh.com/act/files/sw.perm.check.min.js?r=sw');
