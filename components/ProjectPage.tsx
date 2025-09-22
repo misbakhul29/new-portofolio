@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import type { Project } from '../types';
 import { IconArrowLeft, IconExternalLink, IconGitHub } from './icons';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface ProjectPageProps {
   project: Project;
@@ -74,12 +76,17 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project, onBack }) => {
             </button>
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">{project.title}</h1>
-           <p className="text-lg text-slate-400 mb-8">{project.description}</p>
+           <p className="text-lg text-slate-400 mb-8">{project.subtitle}</p>
           <img 
             src={project.imageUrl} 
             alt={project.title} 
             className="w-full rounded-lg mb-8 shadow-lg"
           />
+
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8">
+            <span className="font-semibold text-white text-lg">Project Description:</span>
+            <p className="text-slate-400 text-lg text-justify">{project.description}</p>
+          </div>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8">
             <span className="font-semibold text-white text-lg">Technologies Used:</span>
@@ -92,10 +99,11 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project, onBack }) => {
             </div>
           </div>
           
-          <div 
-            className="prose prose-slate prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-ul:list-disc prose-ul:pl-6"
-            dangerouslySetInnerHTML={{ __html: project.content }} 
-          />
+          <div className="prose prose-slate prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-ul:list-disc prose-ul:pl-6">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {project.content}
+            </ReactMarkdown>
+          </div>
           <div className="mt-12 pt-8 border-t border-slate-700 flex flex-wrap items-center gap-6">
             <p className="text-white font-semibold text-lg">Project Links</p>
             <div className="flex items-center gap-4">

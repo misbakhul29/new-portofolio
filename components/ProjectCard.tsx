@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onProjectSelect }) =
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
-        <p className="text-slate-400 mb-4 text-sm leading-relaxed flex-grow">{project.description}</p>
+        <p className="text-slate-400 mb-4 text-sm leading-relaxed flex-grow">{project.subtitle}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span key={tag} className="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">

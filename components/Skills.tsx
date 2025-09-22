@@ -37,7 +37,7 @@ const skills: { category: string; list: Skill[] }[] = [
     list: [
       { name: 'Node.js', icon: <IconBrandNodejs size={40} stroke={1.5} />, mastery: 'Proficient' },
       { name: 'PostgreSQL', icon: <IconDatabase size={40} stroke={1.5} />, mastery: 'Familiar' },
-      { name: 'MongoDB', icon: <IconBrandMongodb size={40} stroke={1.5} />, mastery: 'Familiar' },
+      // { name: 'MongoDB', icon: <IconBrandMongodb size={40} stroke={1.5} />, mastery: 'Familiar' },
     ],
   },
   {

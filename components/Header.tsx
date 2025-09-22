@@ -25,7 +25,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#" className="text-white font-bold text-2xl" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              JD<span className="text-cyan-400">.</span>
+              MM<span className="text-cyan-400">.</span>
             </a>
           </div>
           <div className="hidden md:block">

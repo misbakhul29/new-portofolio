@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import ArticlePage from './components/ArticlePage';
 import ProjectPage from './components/ProjectPage';
 import type { Article, Project } from './types';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const BackgroundAnimation = () => (
   <div
@@ -23,6 +24,7 @@ const BackgroundAnimation = () => (
   </div>
 );
 
+const queryClient = new QueryClient()
 
 const App: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
@@ -44,6 +46,7 @@ const App: React.FC = () => {
   };
 
   return (
+    <QueryClientProvider client={queryClient}>
     <div className="bg-transparent relative z-10">
       <BackgroundAnimation />
       <Header />
@@ -75,6 +78,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
     </div>
+    </QueryClientProvider>
   );
 };
 

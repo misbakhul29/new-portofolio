@@ -1,0 +1,24 @@
+// Prisma schema for Project table
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  subtitle    String
+  description String
+  imageUrl    String
+  tags        String[]
+  liveUrl     String
+  repoUrl     String
+  slug        String   @unique
+  content     String
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  content     String
+  imageUrl    String?
+  slug        String   @unique
+  publishedAt DateTime @default(now())
+  tags        String[]
+}

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
             Hi, my name is
           </p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            John Doe.
+            Misbakhul Munir.
           </h1>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-400 mb-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             I build things for the web.
