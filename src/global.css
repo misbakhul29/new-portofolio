@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Global custom styles */
+
+:root {
+  --brand-cyan: #22d3ee;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+}
+
+/* Markdown tweaks */
+.prose pre {
+  overflow-x: auto;
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Utility */
+.container {
+  max-width: 1200px;
+}
+
+h3 {
+  @apply text-2xl font-bold text-white my-2 mt-4 leading-8;
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+li {
+  @apply text-slate-400 text-justify leading-8;
+}
+
+p {
+  @apply text-slate-400 text-justify leading-8;
+}

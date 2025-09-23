@@ -8,13 +8,13 @@ const About: React.FC = () => {
       <div className="grid md:grid-cols-5 gap-10 items-center">
         <div className="md:col-span-3">
           <div className="text-slate-400 text-lg space-y-4">
-            <p>
+            <p className='text-left'>
               Hello! I'm Misbakhul Munir, a web developer based in Indonesia. I have a passion for creating beautiful and functional websites and applications. My journey into web development started back in 2020 when I decided to try editing a simple HTML template — turns out hacking together a custom webpage was a lot of fun!
             </p>
-            <p>
+            <p className='text-left'>
               Fast-forward to today, and I've had the privilege of working on a diverse range of projects. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
             </p>
-            <p>
+            <p className='text-left'>
               I'm a firm believer in continuous learning and am always looking for new challenges to tackle. When I'm not at the computer, I enjoy badminton, gaming, and cooking.
             </p>
           </div>

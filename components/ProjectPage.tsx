@@ -100,7 +100,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project, onBack }) => {
           </div>
           
           <div className="prose prose-slate prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-ul:list-disc prose-ul:pl-6">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+              img: ({node, ...props}) => <img {...props} onError={(e) => {
+                e.currentTarget.src = 'https://placehold.co/600x400?text=Image+Unavailable';
+                e.currentTarget.onerror = null;
+              }} />
+            }}>
               {project.content}
             </ReactMarkdown>
           </div>
