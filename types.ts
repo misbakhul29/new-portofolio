@@ -30,3 +30,9 @@ export interface Article {
   content: string;
   tags?: string[];
 }
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}

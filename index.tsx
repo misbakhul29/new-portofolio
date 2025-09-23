@@ -1,9 +1,8 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import './src/global.css';
+import CookieConsent from 'react-cookie-consent';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -16,7 +15,7 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-    <App />
+      <App />
     </QueryClientProvider>
   </React.StrictMode>
 );
