@@ -1,0 +1,41 @@
+{
+  "name": "Misbakhul Munir - Web Developer Portfolio",
+  "short_name": "Misbakhul",
+  "description": "Portfolio of Misbakhul Munir, a web developer specializing in React, Next.js, and TypeScript. Showcasing projects, skills, and expertise in modern web development.",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Portfolio Preview"
+    }
+  ],
+  "categories": ["portfolio", "web development", "personal"],
+  "dir": "ltr"
+}
