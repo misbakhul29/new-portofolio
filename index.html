@@ -18,10 +18,20 @@
       content="Misbakhul Munir, web developer, portfolio, React, Next.js, TypeScript, JavaScript, Node.js, Tailwind CSS, web applications, front-end development"
     />
     <meta name="author" content="Misbakhul Munir" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://misbakhul.my.id/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#000000" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://misbakhul.com/" />
+    <meta property="og:url" content="https://misbakhul.my.id/" />
     <meta
       id="og-title"
       property="og:title"
@@ -35,12 +45,12 @@
     <meta
       id="og-image"
       property="og:image"
-      content="https://misbakhul.com/og-image.png"
+      content="https://misbakhul.my.id/og-image.png"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://misbakhul.com/" />
+    <meta property="twitter:url" content="https://misbakhul.my.id/" />
     <meta
       id="twitter-title"
       property="twitter:title"
@@ -54,9 +64,30 @@
     <meta
       id="twitter-image"
       property="twitter:image"
-      content="https://misbakhul.com/og-image.png"
+      content="https://misbakhul.my.id/og-image.png"
     />
 
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Misbakhul Munir",
+        "url": "https://misbakhul.my.id/",
+        "image": "https://misbakhul.my.id/og-image.png",
+        "jobTitle": "Web Developer",
+        "sameAs": [
+          "https://github.com/misbakhul",
+          "https://linkedin.com/in/misbakhul",
+          "https://twitter.com/misbakhul"
+        ]
+      }
+    </script>
+
+    <!-- Tailwind Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -65,28 +96,30 @@
             animation: {
               "fade-in-up": "fadeInUp 0.8s ease-out forwards",
               "fade-in": "fadeIn 0.5s ease-out forwards",
-              blob: "blob 10s infinite",
+              blob: "blob 10s infinite"
             },
             keyframes: {
               fadeInUp: {
                 "0%": { opacity: "0", transform: "translateY(20px)" },
-                "100%": { opacity: "1", transform: "translateY(0)" },
+                "100%": { opacity: "1", transform: "translateY(0)" }
               },
               fadeIn: {
                 "0%": { opacity: "0" },
-                "100%": { opacity: "1" },
+                "100%": { opacity: "1" }
               },
               blob: {
                 "0%": { transform: "translate(0px, 0px) scale(1)" },
                 "33%": { transform: "translate(30px, -50px) scale(1.1)" },
                 "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
-                "100%": { transform: "translate(0px, 0px) scale(1)" },
-              },
-            },
-          },
-        },
+                "100%": { transform: "translate(0px, 0px) scale(1)" }
+              }
+            }
+          }
+        }
       };
     </script>
+
+    <!-- Import maps -->
     <script type="importmap">
       {
         "imports": {
@@ -97,10 +130,9 @@
         }
       }
     </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SC2TQSBDC5"
-    ></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC2TQSBDC5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -112,7 +144,7 @@
         ad_storage: "denied",
         ad_user_data: "denied",
         ad_personalization: "denied",
-        analytics_storage: "denied",
+        analytics_storage: "denied"
       });
 
       gtag("config", "G-SC2TQSBDC5");
