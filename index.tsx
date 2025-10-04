@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CookieConsent from 'react-cookie-consent';
+import { Analytics } from "@vercel/analytics/next"
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -15,6 +16,8 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+      <Analytics />
+      <CookieConsent />
       <App />
     </QueryClientProvider>
   </React.StrictMode>
